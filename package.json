@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^1.8.1",
     "@tailwindcss/forms": "^0.4.0",
     "next": "12.1.5",
     "react": "18.0.0",

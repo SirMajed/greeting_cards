@@ -14,7 +14,7 @@ export default function Index() {
       <Navbar />
       <div className='flex flex-col lg:flex-row gap-10 items-center justify-center'>
         <div>
-          <Image src={bg.src} height="400" width="600" />
+          <Image alt='Image' src={bg.src} height="400" width="600" />
         </div>
 
         <div className='text-center lg:text-right select-none px-3 lg:px-5 xl:px-0'>
