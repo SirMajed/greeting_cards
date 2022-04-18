@@ -1,13 +1,16 @@
 import bg from '@/images/bgg.png'
+import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import Footer from 'src/components/Footer'
 import Navbar from 'src/components/Navbar'
 export default function Index() {
-  const lg = 'lg:'
-  const sm = 'sm:'
   return (
     <div className='flex flex-col justify-between h-screen'>
+      <Head>
+        <title>Happy Eid 2021</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <Navbar />
       <div className='flex flex-col lg:flex-row gap-10 items-center justify-center'>
         <div>

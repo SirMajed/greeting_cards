@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { exportComponentAsJPEG } from 'react-component-export-image'
 import Navbar from 'src/components/Navbar'
 import Footer from 'src/components/Footer'
+import Head from 'next/head'
 
 const ComponentToPrint = React?.forwardRef((props, ref: any) => (
     <div ref={ref}>
@@ -13,12 +14,14 @@ const ComponentToPrint = React?.forwardRef((props, ref: any) => (
 ));
 
 const Eid = () => {
-
-
     const [name, setName] = useState('')
     const componentRef = useRef();
     return (
         <div className='flex flex-col justify-between h-screen'>
+            <Head>
+                <title>Happy Eid 2021</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
             <div className="flex flex-col lg:flex-col gap-10 items-center justify-center">
                 <Navbar />
                 <React.Fragment>
