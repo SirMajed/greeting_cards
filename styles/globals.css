@@ -8,4 +8,8 @@
     font-family: "Tajwal";
     src: url("../public//fonts/Tajawal-Medium.ttf");
   }
+@font-face {
+    font-family: "DTNASKH1";
+    src: url("../public//fonts/DTNASKH1.TTF");
+  }
 

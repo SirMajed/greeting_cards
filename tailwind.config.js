@@ -3,7 +3,8 @@ module.exports = {
   content: ['./pages/**/*.{js,ts,jsx,tsx}', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     fontFamily: {
-      'tajwal': ['Tajwal', 'sans-serif']
+      'tajwal': ['Tajwal', 'sans-serif'],
+      'deco': ['DTNASKH1', 'sans-serif'],
     },
     colors: {
       'bg': '#f4f0e7',
