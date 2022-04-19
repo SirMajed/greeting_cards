@@ -1,4 +1,4 @@
-import bg from '@/images/bgg.png'
+import bg from '../public/bgg.png'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -14,7 +14,7 @@ export default function Index() {
       <Navbar />
       <div className='flex flex-col lg:flex-row gap-10 items-center justify-center'>
         <div>
-          <Image alt='Image' src={bg.src} height="400" width="600" />
+          <Image alt='Image' src={bg} height="400" width="600" />
         </div>
 
         <div className='text-center lg:text-right select-none px-3 lg:px-5 xl:px-0'>

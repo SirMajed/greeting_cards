@@ -1,8 +1,5 @@
 import Link from 'next/link'
 import React, { useRef, useState } from 'react'
-import eidimage from '@/images/test.png'
-import Image from 'next/image'
-import { exportComponentAsJPEG } from 'react-component-export-image'
 import Navbar from 'src/components/Navbar'
 import Footer from 'src/components/Footer'
 import Head from 'next/head'
