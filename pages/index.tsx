@@ -1,4 +1,4 @@
-import bg from '../public/bgg.png'
+import bg from '@/images/bgg.png'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
