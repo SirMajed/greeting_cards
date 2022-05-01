@@ -5,6 +5,7 @@ module.exports = {
     fontFamily: {
       'tajwal': ['Tajwal', 'sans-serif'],
       'deco': ['DTNASKH1', 'sans-serif'],
+      'neoSans': ['NeoSansArabic', 'sans-serif'],
     },
     colors: {
       'bg': '#f4f0e7',
@@ -13,7 +14,7 @@ module.exports = {
       't3': '#056159',
       't4': '#dcae64',
       'button': '#ff7263',
-      'field': '#f6f3ed',
+      'field': '#faf8f5',
       transparent: 'transparent',
       current: 'currentColor',
       black: colors.black,
@@ -27,6 +28,12 @@ module.exports = {
       violet: colors.violet,
       emerald: colors.emerald,
       teal: colors.teal,
+      pink: colors.pink,
+      orange: colors.orange,
+      green: colors.green,
+      purple: colors.purple,
+      'b1': '#32A17B',
+      'b2': '#046057'
     }
   },
   plugins: [],

@@ -12,4 +12,26 @@
     font-family: "DTNASKH1";
     src: url("../public//fonts/DTNASKH1.TTF");
   }
+@font-face {
+    font-family: "NeoSansArabic";
+    src: url("../public//fonts/NeoSansArabic.ttf");
+  }
   
+
+  ::-webkit-scrollbar {
+    width: 4px;
+    cursor: pointer;
+    /*background-color: rgba(229, 231, 235, var(--bg-opacity));*/
+}
+::-webkit-scrollbar-track {
+    background-color: rgba(229, 231, 235, var(--bg-opacity));
+    cursor: pointer;
+    /*background: red;*/
+}
+::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background-color: #1c4430f2;
+    border-radius: 10px;
+    margin-top: 50px;
+    /*outline: 1px solid slategrey;*/
+}

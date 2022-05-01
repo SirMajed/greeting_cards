@@ -1,17 +1,11 @@
 import bg from '@/images/bgg.png'
-import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import Footer from 'src/components/Footer'
-import Navbar from 'src/components/Navbar'
+import Layout from 'src/Layout'
 export default function Index() {
   return (
-    <div className='flex flex-col justify-between h-screen'>
-      <Head>
-        <title>Happy Eid 2021</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
-      <Navbar />
+    <Layout>
+      <div className="flex items-center h-full justify-center ">
       <div className='flex flex-col lg:flex-row gap-10 items-center justify-center'>
         <div>
           <Image alt='Image' src={bg} height="400" width="600" />
@@ -28,7 +22,7 @@ export default function Index() {
           </Link>
         </div>
       </div>
-      <Footer />
     </div>
+    </Layout>
   )
 }

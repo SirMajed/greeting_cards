@@ -16,11 +16,17 @@
       "@/app/*": [
         "src/app/*"
       ],
+      "@/components/*": [
+        "src/components/*"
+      ],
       "@/slices/*": [
         "src/slices/*"
       ],
       "@/images/*": [
         "public/images/*"
+      ],
+      "@/utilities/*": [
+        "src/utilities/*"
       ]
     },
     "lib": [
