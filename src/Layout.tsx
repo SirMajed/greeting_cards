@@ -8,26 +8,14 @@ interface Props {
 const Layout: FC<Props> = (props: Props) => {
     return (
         <>
-{/* 
             <div className="flex flex-col h-screen">
-                <Navbar />
-                <div className="relative overflow-y-auto mt-14 lg:mt-0">
-                    {props.children}
-                </div>
-            </div> */}
-
-            <div className="flex flex-col h-screen">
-            <ToastContainer />
-
-                {/* <header className="py-5 bg-gray-700 text-white text-center">
-                    Sticky Header and Footer with Tailwind
-                </header> */}
+                <ToastContainer />
                 <Navbar />
                 <main className="flex-1 overflow-y-auto pt-16 lg:pt-0">
-                {props.children}
+                    {props.children}
                 </main>
                 <footer className="py-3 lg:py-4 bg-white text-center text-gray-800 font-neoSans border">
-                     ❤️ صنع بكل حب من ماجد
+                    ❤️ صنع بكل حب من ماجد
                 </footer>
             </div>
 

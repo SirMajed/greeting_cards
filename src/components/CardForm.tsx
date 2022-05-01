@@ -1,9 +1,8 @@
-import { FC, useState } from "react"
+import { FC } from "react"
 import { BiDownload } from "react-icons/bi"
 import { IoIosArrowBack, IoIosArrowDown, IoIosArrowForward, IoIosArrowUp } from "react-icons/io"
 import { downloadImage } from "../utilities"
 import ColorPicker from "./colorPicker"
-import axios from 'axios'
 
 interface Props {
     name: any,
@@ -16,12 +15,6 @@ interface Props {
     printRef: any
 }
 const CardForm: FC<Props> = ({ name, handleTextChange, color, colorr, setColorr, styles, moveText, printRef }) => {
-    const [data, setData] = useState<any>()
-    const downloadImg = async () => {
-        const res = await axios('/api')
-        console.log(res.data);
-        setData(res.data.message)
-    }
     return (
         <div className='flex flex-col items-center lg:items-end '>
             <h1 className='font-neoSans text-2xl text-t3 text-right'>صمم بطاقتك الان</h1>
@@ -34,13 +27,10 @@ const CardForm: FC<Props> = ({ name, handleTextChange, color, colorr, setColorr,
                 <div className="relative">
                     <div className="flex items-center gap-4 mt-6">
                         <ColorPicker color={colorr} setColor={setColorr} styles={styles} />
-                        {/* <HexColorPicker color={colorr} onChange={setColorr} /> */}
                         <h1 className='font-neoSans text-md text-gray-700 mb-2'> اختر لون النص - </h1>
 
                     </div>
                 </div>
-
-
                 <div className="flex items-center gap-2 mt-6">
                     <div className="buttons flex items-center gap-1">
                         <div onClick={() => moveText('bottom')} className='bg-gray-800 text-white p-1.5 rounded-md cursor-pointer'><IoIosArrowDown /></div>
@@ -58,7 +48,6 @@ const CardForm: FC<Props> = ({ name, handleTextChange, color, colorr, setColorr,
                 <p className="text-gray-500 text-xs">تنبيه لأجهزة الايفون</p>
                 <p className="text-gray-500 text-xs">بعد تحميل الصورة, اضغط على الايقونة الزرقاء</p>
                 <p className="text-gray-500 text-xs">ثم ستجدها في خانة التحميلات</p>
-                <p>{data && data}</p>
 
             </div>
         </div>
