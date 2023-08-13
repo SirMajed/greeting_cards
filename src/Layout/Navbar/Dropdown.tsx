@@ -5,13 +5,11 @@ const Dropdown = ({ submenus, dropdown }) => {
       {submenus.map((submenu, index) => (
         <li key={index} className="relative text-md">
           {submenu.soon !== false && (
-            <Link  href={submenu.path}>
-              <a
-                className={`block p-2 hover:bg-t2 hover:bg-opacity-5 transition`}
-                href="/#"
-              >
-                {submenu.name}
-              </a>
+            <Link
+              className={`block p-2 hover:bg-t2 hover:bg-opacity-5 transition`}
+              href={submenu.path}
+            >
+              {submenu.name}
             </Link>
           )}
         </li>

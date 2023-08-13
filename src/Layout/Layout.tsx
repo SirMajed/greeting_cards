@@ -11,7 +11,7 @@ const Layout: FC<Props> = (props: Props) => {
     <>
       <div className="flex flex-col h-screen">
         <ToastContainer />
-        <Navbar />
+        {/* <Navbar /> */}
         <main className="flex-1 overflow-y-auto ">{props.children}</main>
         <footer className="text-sm py-3 lg:py-4 bg-white text-center text-gray-800 font-neoSans border">
           <Link  href={'https://www.linkedin.com/in/alhasenmajed/'}>Majed A. Alhasin</Link>
