@@ -2,9 +2,7 @@ import React, { useEffect, useState } from 'react'
 import EidImage from 'src/components/EidImage'
 import { imagesArr } from '@/utilities/index'
 import reactCSS from 'reactcss'
-import Layout from 'src/Layout'
 import CardForm from '@/components/CardForm'
-
 const Eid = () => {
     const [name, setName] = useState('')
     const printRef = React.useRef();
@@ -15,6 +13,10 @@ const Eid = () => {
     useEffect(() => {
         setImages([...imagesArr])
     }, [])
+
+    const handleTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setName(e.target.value)
+    }
 
 
     const clickForward = () => {
@@ -86,27 +88,19 @@ const Eid = () => {
             },
         },
     });
-
-    const handleTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setName(e.target.value)
-    }
-
     return (
-        <Layout>
+        <div className="flex w-full h-full pt-72 lg:pt-0 items-center justify-center ">
 
-            <div className="flex w-full h-full pt-52 lg:pt-0 items-center justify-center ">
-
-                    <div className="grid w-11/12 lg:w-1/2 grid-cols-1 lg:grid-cols-2 justify-center mt-0 ">
-                        <div className="pb-6 md:pb-0 md:pr-6 ">
-                            <EidImage name={name} image={images[index]?.src} printRef={printRef} clickBackward={clickBackward} clickForward={clickForward} colorr={colorr} />
-                        </div>
-                        <div className="mt-0 lg:mt-4">
-                            <CardForm color={color} printRef={printRef.current} colorr={colorr} setColorr={setColorr} handleTextChange={handleTextChange} moveText={moveText} name={name} styles={styles} />
-                        </div>
-                    </div>
-               
+            <div className="grid w-11/12 lg:w-1/2 grid-cols-1 lg:grid-cols-2 justify-center mt-0 ">
+                <div className="pb-6 md:pb-0 md:pr-6 ">
+                    <EidImage name={name} image={images[index]?.src} printRef={printRef} clickBackward={clickBackward} clickForward={clickForward} colorr={colorr} />
+                </div>
+                <div className="mt-0 lg:mt-4">
+                    <CardForm color={color} printRef={printRef.current} colorr={colorr} setColorr={setColorr} handleTextChange={handleTextChange} moveText={moveText} name={name} styles={styles} />
+                </div>
             </div>
-        </Layout>
+
+        </div>
     )
 }
 export default Eid
